@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos de mi casa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-3">
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+        <h1>Equipos de mi casa</h1>
+        <p>Consumo semanal de cuatro equipos. Tarifa de mi factura: <span class="badge text-bg-light">960,34 COP por kWh</span></p>
+        <nav class="nav nav-pills">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+            <a class="nav-link text-white" href="equipos.html">Equipos de mi casa</a>
+            <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
+            <a class="nav-link text-white" href="registro.html">Registrar un equipo</a>
+            <a class="nav-link text-white" href="encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Consumo por equipo</h2>
+            <p>Fórmula: kWh = W × horas ÷ 1000. En la nevera uso el consumo mensual de su etiqueta ÷ 30 × 7.</p>
+            <table class="table table-striped table-bordered">
+                <caption>Consumo semanal de los equipos</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Equipo</th>
+                        <th rowspan="2">Potencia (W)</th>
+                        <th colspan="2">Horas de uso por día</th>
+                        <th rowspan="2">kWh en la semana</th>
+                        <th rowspan="2">Costo en la semana (COP)</th>
+                    </tr>
+                    <tr>
+                        <th>Lunes a viernes</th>
+                        <th>Sábado y domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nevera Mabe RMP389JCG</td><td>36,9 kWh/mes (etiqueta)</td><td>24</td><td>24</td><td>8,61</td><td>8.269</td></tr>
+                    <tr><td>Televisor LG 75" 75UA8000PSB</td><td>150 (estimado)</td><td>3</td><td>0</td><td>2,25</td><td>2.161</td></tr>
+                    <tr><td>Ventilador de torre FZ30-48SR-LA</td><td>45 (etiqueta)</td><td>12</td><td>12</td><td>3,78</td><td>3.630</td></tr>
+                    <tr><td>MacBook Air 2020</td><td>30 (estimado)</td><td>12</td><td>12</td><td>2,52</td><td>2.420</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total de la semana</th>
+                        <td>17,16</td>
+                        <td>16.480</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>¿Qué equipo gasta más?</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title h5">La nevera</h3>
+                    <p class="card-text">
+                        Trabaja las 24 horas. Aunque el TV y el ventilador se usan más horas en un día,
+                        la nevera tiene el costo semanal más alto: <strong>$8.269</strong>.
+                    </p>
+                </div>
+            </div>
+            <figure>
+                <img class="img-fluid" src="img/etiqueta-nevera.png" alt="Etiqueta energética de la nevera Mabe RMP389JCG con consumo de 36,9 kWh al mes y calificación B" width="400">
+                <figcaption>Etiqueta de la nevera: 36,9 kWh al mes.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Fotos de las etiquetas</h2>
+            <div class="row g-3">
+                <figure class="col-md-6">
+                    <img class="img-fluid" src="img/etiqueta-tv.png" alt="Sección de energía del televisor LG con voltaje de 100 a 240 V y consumo en espera menor a 0,5 W">
+                    <figcaption>Datos de energía del TV LG 75".</figcaption>
+                </figure>
+                <figure class="col-md-6">
+                    <img class="img-fluid" src="img/etiqueta-ventilador.png" alt="Especificaciones del ventilador de torre FZ30-48SR-LA con potencia de 45 W y voltaje de 110 V">
+                    <figcaption>Especificaciones del ventilador de torre.</figcaption>
+                </figure>
+                <figure class="col-md-6">
+                    <img class="img-fluid" src="img/etiqueta-mac.png" alt="Sección de batería y energía de la MacBook Air con adaptador USB-C de 30 W">
+                    <figcaption>Batería y adaptador de la MacBook Air.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-4 text-muted">
+        <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+</body>
+</html>

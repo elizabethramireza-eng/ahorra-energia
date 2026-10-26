@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de hábitos de consumo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-3">
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+        <h1>Encuesta de hábitos de consumo</h1>
+        <p>Cuéntenos cómo consume energía su familia.</p>
+        <nav class="nav nav-pills">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+            <a class="nav-link text-white" href="equipos.html">Equipos de mi casa</a>
+            <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
+            <a class="nav-link text-white" href="registro.html">Registrar un equipo</a>
+            <a class="nav-link text-white" href="encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="encuesta.html" method="get">
+
+            <fieldset class="border rounded p-3 mb-3">
+                <legend>Datos de la familia</legend>
+
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input class="form-control" type="text" id="nombre" name="nombre" required>
+                </p>
+
+                <p>
+                    <label for="email">Correo electrónico:</label>
+                    <input class="form-control" type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="personas">Número de personas en casa:</label>
+                    <input class="form-control" type="number" id="personas" name="personas" min="1" max="15" required>
+                </p>
+
+                <p>
+                    <label for="tipo">Tipo de vivienda:</label>
+                    <select class="form-select" id="tipo" name="tipo" required>
+                        <option value="">Elija una opción</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa">Casa</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset class="border rounded p-3 mb-3">
+                <legend>Hábitos de uso</legend>
+
+                <p>
+                    <label for="tv">Horas diarias de TV entre semana: <output id="tvSalida">3</output></label>
+                    <input class="form-range" type="range" id="tv" name="tv" min="0" max="12" value="3" oninput="tvSalida.value = this.value">
+                </p>
+
+                <p>¿Usa ventilador en casa?</p>
+                <input type="radio" id="ventSi" name="ventilador" value="si" required>
+                <label for="ventSi">Sí</label>
+                <input type="radio" id="ventNo" name="ventilador" value="no">
+                <label for="ventNo">No</label>
+
+                <p class="mt-3">Equipos que usa todos los días:</p>
+                <input type="checkbox" id="eqNevera" name="equipos" value="nevera">
+                <label for="eqNevera">Nevera</label>
+                <input type="checkbox" id="eqLaptop" name="equipos" value="laptop">
+                <label for="eqLaptop">Computador portátil</label>
+                <input type="checkbox" id="eqLavadora" name="equipos" value="lavadora">
+                <label for="eqLavadora">Lavadora</label>
+
+                <p class="mt-3">
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea class="form-control" id="comentarios" name="comentarios" rows="3" cols="40" placeholder="Ej.: qué cambiaría en casa"></textarea>
+                </p>
+            </fieldset>
+
+            <button class="btn btn-primary" type="submit">Enviar encuesta</button>
+            <button class="btn btn-secondary" type="reset">Borrar</button>
+        </form>
+    </main>
+
+    <footer class="mt-4 text-muted">
+        <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+</body>
+</html>
