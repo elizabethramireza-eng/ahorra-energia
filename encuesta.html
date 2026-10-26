@@ -54,7 +54,8 @@
                 <legend>Hábitos de uso</legend>
 
                 <p>
-                    <label for="tv">Horas diarias de TV entre semana: <output id="tvSalida">3</output></label>
+                    <label for="tv">Horas diarias de TV entre semana:</label>
+                    <output id="tvSalida" for="tv">3</output>
                     <input class="form-range" type="range" id="tv" name="tv" min="0" max="12" value="3" oninput="tvSalida.value = this.value">
                 </p>
 
